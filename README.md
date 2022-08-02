@@ -1,436 +1,106 @@
+# Blockchain-Based-Property-Registration
 
+<a href="LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=green"></a>
+<img src="https://img.shields.io/badge/Ethereum-20232A?style=for-the-badge&logo=ethereum&logoColor=white">
+<img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white">
+## Land Registration using Blockchain
+## Problem it Solves:
+1. The elimination of middlemen: The elimination of middlemen or brokers makes the process of land registration less expensive. Brokers who try to defraud uninformed people will be unable to do so any longer. Brokers frequently take a long time to finish procedures, thus our project will help people save time.
+3. A distributed tamper-proof ledger that prohibits ownership fraud.
+4. IPFS is used to store important property registration papers in a secure manner.
 
+## Technology Stack:
+1. Ethereum Blockchain
+2. Polygon/Matic
+3. Web3Dart
+4. IPFS
+5. Flutter
+6. Metamask
 
-**Smart
-Contracts**
+## Demo
+Our Dapp is demonstrated in this video [here](https://youtu.be/0Coz_ivOaHs)
 
-Smart contracts are
-**self-executing** contracts with the terms of the agreement
-between buyer and seller being directly written into lines of code.
-The code and the agreements contained therein exist across a
-**distributed**, **decentralized** [blockchain](https://www.investopedia.com/terms/b/blockchain.asp)
-network. Smart contracts permit trusted **transactions** and
-**agreements** to be carried out among disparate, anonymous
-parties without the need for a central authority, legal system, or
-external enforcement mechanism. They render transactions **traceable**,
-**transparent**, and **irreversible**.
+## Run Application on deployed website
+Check out the deployed website [here](https://landregistry.live/)
 
-**Blockchain**
+https://landregistry.live/
 
-The smart contracts
-are developed for the **ethereum** blockchain. Ethereum is a
-**decentralized** platform that runs smart contracts. **Contracts**
-can be deployed  on the **Ethereum Virtual Machine** (EVM). Once
-deployed it can be accesed globally. These contracts are enforced and
-certified by parties that we call miners. Miners are multiple
-computers who add a transaction (Addition or modification of the
-state) to a public ledger that we call a block. Multiple blocks
-constitute a blockchain.
+This is for demonstration purposes only. With this key, you can log in as Land Inspector:
+ <pre><b>6b86cddfedbec68ed2a1c7e14b993840a0848595ba5787aec9e8a38b18f0d96a</b></pre>
+For user: <pre><b>3ed4aff1a8ff8e28df3cd307112f9166886edcc85a27136908e3b1687b111f89</b></pre>\
+You can also use your own Ethereum wallet key as a user.
 
-We pay these miners
-with something called _Gas_, which is the cost to run a
-contract. When you publish a smart contract, or execute a function of
-a smart contract, or transfer money to another account, you pay some
-ether that gets converted into gas.
+#### Check Smart contract At Ropsten Ethereum Testnet: [here](https://ropsten.etherscan.io/address/0x702058ba021cd4e4f847b40f32b58aa5be3a4661)
 
-**Platforms**
-
-**High Level Languages** for smart contract
-developing:
-
-- [Solidity](http://solidity.readthedocs.org/en/latest/) 
-- [Serpent](https://github.com/ethereum/wiki/wiki/Serpent) 
-
-See the differences [here](https://ethereum.stackexchange.com/questions/126/fundamental-limitations-between-solidity-and-serpent).
-
-**Command Line Development Management Tools** for
-creating a DAPP project:
-
-- [Truffle](https://github.com/ConsenSys/truffle) 
-- [Embark](https://github.com/iurimatias/embark-framework) 
-- [Dapple](https://github.com/nexusdev/dapple) 
-
-**Testnode with RPC Interace** for deploying
-contracts on a virtual node and make transactions without the need to
-be mined:
-
-- [Javascript
-	testrpc](https://github.com/ethereumjs/testrpc) 
-- [Python
-	testnode](https://github.com/ethereum/pyethereum/wiki/Using-pyethereum.tester) 
-
-**Browser based IDE** to get instant feedback for
-solidity code:
-
-- [ReMix](https://remix.ethereum.org/) 
-- [EthFiddle](https://ethfiddle.com/) 
-
-**Wallet clients** to connect a ethereum wallet
-
-- Metamask 
-- MyEtherWallet 
-
-**Compiler**
-
-The contracts are
-written in solidity codes and these are to be compiled to get the
-**Application Binary Interface** (ABI) codes. ABI is the interface
-between two program modules, one of which is often at the level of
-machine code. The interface is the de facto method for
-encoding/decoding data into/out of the machine code. It defines how
-you can encode Solidity contract calls for the EVM and, backwards,
-how to read the data out of transactions. It also provides the
-**Bytecode** or the opcodes of the contract.
-
-A command line tool
-such as **truffle** or online ide such as **ReMix** can be used
-to compile.
-
-**Network**
-
-The smart contracts
-are deployed on the ethereum network on the EVM. But any transaction
-executed on this network requires ether to be spent, hence its not
-advicable for development.
-
-Ethereum network is
-called ‘**livenet**’ and there exists multiple ‘**testnet**’
-which are copies of ethereum network. Like ethereum, these networks
-have currency called ‘**test ether**’s which can be spent to
-execute a transcation on the network. Now the important difference is
-that you can get free ‘test ether’s here unlike real valued
-ether.
-
-Some testnets are :
-
-- **Testrpc**
-	– This is a local network running on your compuetr. 10 free wallet
-	accounts with test ether is allocated. 
-- **Ropsten**
-	– This is a global testnet with free test ether. 
-- **Rinkeby**
-	– Another global testnet with free ether. 
-
-**Wallet**
-
-Wallets are very
-important part of a smart contract. It serves 2 purposes:
-
-- It serves as
-	client to ethereum wallet. To make a transaction on network ether
-	has to be spent and you can authorize these payments using this. 
-- To
-	communicate with a blockchain and to deploy, you need to either have
-	a full node or a wallet client of the network.  A wallet can
-	facilitate the communication with the network. 
-
-**Deployment**
-
-To deploy a contract
-the following steps are to be taken:
-
-- Compile the
-	code and get necessary **bytecodes** and **ABIcodes** 
-- Select a
-	network to migrate to 
-- Make a
-	deployment with a wallet address as transaction sender 
-- Authenticate
-	the transaction form the wallet and pay the transaction cost. 
-
-Your contract will
-be deployed and will be assigned a public address which can be used
-to access it.
-
-**Web
-Interface**
-
-A web app can be
-used to work with the contract. A backend  javascript framework,
-**web3.js**, can intract with the blockchain. It can connect to
-the network, identify the contract and perform transactions. There
-are two kinds of transaction operation on a contract:
-
-**1.Call**
-
-A call is a local invocation of a contract function that does not
-broadcast or publish anything on the blockchain. It is a read-only
-operation and will not consume any Ether. It simulates what would
-happen in a transaction, but discards all the state changes when it
-is done. It is synchronous and the return value of the contract
-function is returned immediately.
-
-**2.Transaction**
-
-A transaction is broadcasted to the network, processed by miners,
-and if valid, is published on the blockchain. It is a write-operation
-that will affect other accounts, update the state of the blockchain,
-and consume Ether (unless a miner accepts it with a gas price of
-zero). It is asynchronous, because it is possible that no miners will
-include the transaction in a block (for example, the gas price for
-the transaction may be too low). Since it is asynchronous, the
-immediate **return value of a transaction is always the
-transaction's hash.**
-
-The **web3js framework **works in the following way:
-
-- Connect to a network using  ‘**web3Provider**’ to a
-	localhost(local testnet) or a global network 
-- Create a contract **instance** using the **ABI code **and
-	C**ontract address**. Contract address identifies the particular
-	contract on the network to interact with and the ABI code specifies
-	how to access each function. 
-- Use the instance to call contract functions like
-	javascript. 
-
-**Steps:**
-
-**Pre requistes**
-- Nodejs v12+
-- Docker
-- ganache-cli (npm i -g ganache-cli)
-- truffle (npm i -g truffle)
-- yarn (npm i -g yarn)
-
-**Install MetaMask**
-
-1. Go to [https://metamask.io/](https://metamask.io/)
-and install the **browser plugin**.
-
-2. Setup a **password** and open the wallet. Select the network
-as ‘**Rinkeby Test Network**’ / ‘**Ropsten Test Network**’  .
-
-3. Click on ‘**CREATE ACCOUNT**’ to create a new wallet
-account and click ‘**Copy Address to clipboard**’ to copy your
-**public address** for the wallet.
-
-4. Go to [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/)
-to get free test ether to the address. Check your account on metamask
-and verify the **balance**. You can also make use of ropsten network, there will be a
-faucet option available in metamask to get test ethereum.
-
-5. Repeat steps 3 and 4 to create more accounts.
-
-**Deploying contract**
-
-1.Create .env file with the following format in the root of the cloned repo
-
+## To Run Application Locally
+1. Clone the github repository and cd to the folder
+2. Install the flutter 2.10.5, nodejs
+3. Install ganache and truffle as shown below:
 ```
-INFURA_KEY="<paste you infura key>"
-MNEMONIC="<Mnemonics>"
+npm install -g truffle
 ```
-Please make sure that addresses generated from the mnemonics have some funds in the network you are trying to deploy also is the same mnemonics loaded in metamask for the ease of testing
-
-2. Execute "yarn install
-
-3. Execute "yarn compile"
-
-4. Execute "yarn deploy:ropsten" // or rinkeby
-
-5. Your contract will get deployed to the network
-
-6. Open  **src/js/app.js** file. This is the javascript file
-that interacts with the contract.
-
-7. Paste your contract address replacing  '**contract_address**'
-in **“web3.eth.Contract(abi, <contract-addess>”)
-
-8. Run "yarn serve" to serve the web app locally
-
-9. Connect your metamask to the web app and interact with the Dapp
-
-**Interacting
-on web App**
-
-Fill up the user
-details and click ‘**add user**’ or ‘**add admin**’. A
-**popup** will open up in metamask. **Submit** the transaction.
-Check transaction status to be ‘**success**’. Then the
-corresponding changes are made on contract.
-
-Fetching details
-from a contract is a ‘**call**’ transaction and would’nt be
-send as a transaction from metamask.
-
-A user making a
-transaction to contract is identified by his wallet address. Make
-sure to switch metamask accounts before making the transaction. Only
-the address from which the contract was deployed will be able to
-perform certain operations. 
-
-**Different Operations In the App**
-
-**1.Intialising Contract**
-
-**Output**
-
-- msg.sender is made as creatorAdmin
-- msg.sender is made as superAdmin
-- msg.sender is made as verified user
-
-**2.Create a new Property.**
-
-**parameters**
-
-- CreateProperty- property Id, property value, property owner address
-
-**prerequisites**
-
-- msg.sender should be admin
-- property owner should be verified user
-
-**Output**
-
- mark property Id, Status as Pending, property value, property owner address
-
-**3.Approve the new Property.**
-
-**parameters**
-
-- approveProperty- property Id
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- current owner should not be msg.sender
-
-**Output**
-
-mark property Satus as Approved
-
-**4.Reject the new Property.**
-
-**parameters**
-
-- rejectProperty- property Id
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- current owner should not be msg.sender
-
-**Output** 
-
-Mark property Satus as Rejected
-
-**5. Request Change of Ownership.**
-
-**parameters**
-
-- changeOwnership- property Id, new owner address
-
-**prerequisites**
-
-- msg.sender should be the current owner
-- new owner should be verified user
-- current owner is not the new owner
-- No pending ownership change request should exist.
-
-**Output**
-
-mark property Ownership change request
-
-**6.Approve change in Onwership.**
-
-**parameters**
-
-- ApproveChangeOwnership- property Id
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- ownership change request must exist
-
-**Output**
-
-mark new owner address as current owner
-
-**7.Change the price of the property.**
-
-**parameters**
-
-- changeValue- property Id, new property value
-
-**prerequisites**
-
-- msg.sender should be the current owner
-- No pending ownership change request should exist.
-
-**Output**
-
-change property value
-
-**8.Get the property details.**
-
-**parameters**
-
-- GetPropertyDetails- property Id
-
-**Output**
-
-Status, property value, property owner address
-
-**9.Add new user.**
-
-**parameters**
-
-- addNewUser- address
-
-**prerequisites**
-
-- msg.sender should be admin
-- No pending request for the address should exist.(user or admin or superadmin)
-- address should not be a verified user.(user or admin or superadmin)
-
-**Output**
-mark address as user
-
-**10.Add new admin.**
-
-**parameters**
-
-- AddNewAdmin- address
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- No pending request for the address should exist.(user or admin or superadmin)
-- address should not be a verified user.(user or admin or superadmin)
-
-**Output**
-
-mark address as Admin
-
-**11.Add new SuperAdmin**
-
-**parameters**
-
-- addNewSuperAdmin- address
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- No pending request for the address should exist.(user or admin or superadmin)
-- address should not be a verified user.(user or admin or superadmin)
-
-**Output**
-
-mark address as SuperAdmin
-
-**12. Approve Pending User.**
-
-**parameters**
-
-- approveUsers- address
-
-**prerequisites**
-
-- msg.sender should be superadmin
-- Pending request should exist for address
-
-**Output**
-
-mark address as Verified user
-
-
-
+4. Open Ganache and keep it running in the Background
+5. Install the Metamask chrome extension, choose the local network and import the accounts
+6. Compile and run our migrations from the command line as shown below:
+```
+truffle compile
+truffle migrate
+```
+6 .Copy contract address as seen in the image below and paste in variable `contractAddress` located in the file `./lib/constant/constant.dart`
+<pre>
+2_deploy_migration.js
+=====================
+
+   Replacing 'Land'
+   ----------------
+   > transaction hash:    0x427b2b402f767ac6a90334ab3c687b086b274de747fe10d6e194743b15057d78
+   > Blocks: 0            Seconds: 0
+   <b>>contract address:    0xed690C24C60A48F8A9819c9A15AD75B70CFBEa5a</b>
+   > block number:        3
+   > block timestamp:     1650602828
+   > account:             0x33e94e4619f0AecDf81e9676Eb82c109FBa53356
+   > balance:             99.9154895
+   > gas used:            3996227
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.07992454 ETH
+</pre>
+7. In `constant.dart` file, change the value of the variable `chainId` to `'1337'` and change the value of the variable `rpcUrl` to `"http://127.0.0.1:7545"`
+8. Run the flutter web app
+```
+flutter pub get
+flutter run -d web-server --web-port 5555
+```
+9. Open the browser and the dapp will be running in http://localhost:5555/
+10. Create mapbox api key from https://www.mapbox.com/ and Replace it with `mapBoxApiKey`in `constant.dart` file
+11. Create nftstorage api key from https://nft.storage/ and replace it.
+## Project Flowchart
+<img src="screenshots/flowchart.png" height="450">
+## Screenshots
+Home Page                   |                   Wallet connect/Login
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot1.png" height="225">  |<img src="screenshots/Screenshot7.png" height="225">
+
+Contract Owner Dashboard               |                   User Registration
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot10.png" height="225">  |<img src="screenshots/Screenshot12.png" height="225">
+
+Land Inspector Dashboard                   |                  User Verification 
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot11.png" height="225">     |<img src="screenshots/Screenshot5.png" height="225">
+
+User Dashboard               |                  Adding land on Map    
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot2.png" height="225">     |<img src="screenshots/Screenshot8.png" height="225">
+
+Land Gallery                |                   Land Details    
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot3.png" height="225">     |<img src="screenshots/Screenshot9.png" height="225">
+
+Received Request           |                   Make Payment  
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot6.png" height="225">     |<img src="screenshots/Screenshot4.png" height="225">
+
+Transfer ownership,Seller,buyer photo capture   |                Witness info,photo capture,transfer ownership 
+:---------------------------------:        |      :------------------------------:
+<img src="screenshots/Screenshot14.png" height="225">     |<img src="screenshots/Screenshot13.png" height="225">
